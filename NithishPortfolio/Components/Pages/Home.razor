@@ -1,0 +1,320 @@
+﻿@page "/"
+
+<!-- We use a custom background container for the ambient glow effect -->
+<div class="premium-background">
+    <MudContainer MaxWidth="MaxWidth.Large" Class="pb-4 pt-12 relative z-10">
+
+        <!-- HERO SECTION -->
+        <MudGrid Justify="Justify.Center" Class="mb-16">
+            <MudItem xs="12" sm="10" md="8" Class="d-flex flex-column align-center text-center">
+                <div class="avatar-container mb-8">
+                    <div class="avatar-glow"></div>
+                    <img src="profile.jpeg" class="premium-avatar" alt="Nithish Subakarnan" />
+                </div>
+
+                <MudText Typo="Typo.h1" Class="mb-3 hero-title">
+                    Nithish Subakarnan
+                </MudText>
+
+                <MudText Typo="Typo.h6" Class="mb-6 tracking-widest text-gray-400 font-light">
+                    <span class="text-pink font-bold">SOFTWARE DEVELOPER</span>
+                </MudText>
+
+                <MudText Typo="Typo.body1" Class="mb-10 text-gray-400 d-flex flex-wrap justify-center align-center gap-6">
+                    <span class="d-flex align-center gap-2"><MudIcon Icon="@Icons.Material.Outlined.LocationOn" Size="Size.Small" /> Tamil Nadu, India</span>
+                    <span class="d-flex align-center gap-2"><MudIcon Icon="@Icons.Material.Outlined.Email" Size="Size.Small" /> contactnithish777@gmail.com</span>
+                    <span class="d-flex align-center gap-2"><MudIcon Icon="@Icons.Material.Outlined.Phone" Size="Size.Small" /> +91 8056590777</span>
+                </MudText>
+
+                <div class="d-flex flex-wrap justify-center gap-6">
+                    <MudButton Href="mailto:contactnithish777@gmail.com" Variant="Variant.Filled" Size="Size.Large" Class="premium-btn btn-primary" StartIcon="@Icons.Material.Filled.ChatBubble">
+                        Let's Talk
+                    </MudButton>
+                    <MudButton Href="https://github.com/Nithish-Subakarnan-0777" Target="_blank" Variant="Variant.Outlined" Size="Size.Large" Class="premium-btn btn-secondary" StartIcon="@Icons.Custom.Brands.GitHub">
+                        GitHub
+                    </MudButton>
+                </div>
+            </MudItem>
+        </MudGrid>
+
+        <!-- PROFESSIONAL SUMMARY -->
+        <div class="glass-card pa-8 mb-16 mx-auto" style="max-width: 900px;">
+            <MudText Typo="Typo.h5" Class="mb-4 font-bold text-white text-center">About Me</MudText>
+            <MudText Typo="Typo.body1" Class="text-gray-300 text-center" Style="line-height: 1.9; font-size: 1.1rem;">
+                Software Developer specializing in cross-platform (C#, .NET, MAUI) and front-end web development (HTML, CSS, JavaScript). Strong foundation in Python, SQL, and algorithm design for building robust, end-to-end software solutions. <span class="text-white font-bold">C#, .NET, and MAUI</span> for cross-platform application development.
+            </MudText>
+        </div>
+
+        <!-- TECHNICAL ARSENAL -->
+        <MudText Typo="Typo.h4" Class="mb-8 font-bold text-center text-white">Technical Arsenal</MudText>
+        <MudGrid Class="mb-20">
+            @foreach (var skill in Skills)
+            {
+                <MudItem xs="12" sm="6" md="4" Style="display: flex;">
+                    <div class="glass-card skill-card pa-6 d-flex flex-column align-center text-center flex-grow-1">
+                        <MudIcon Icon="@skill.Icon" Size="Size.Large" Class="mb-4 skill-icon" />
+                        <MudText Typo="Typo.h6" Class="mb-2 text-white font-bold">@skill.Category</MudText>
+                        <MudText Typo="Typo.body2" Class="text-gray-400">@skill.Details</MudText>
+                    </div>
+                </MudItem>
+            }
+        </MudGrid>
+
+        
+        <!-- FEATURED PROJECTS -->
+        <MudText Typo="Typo.h4" Class="mb-8 font-bold text-center text-white">Featured Projects</MudText>
+        <MudGrid Class="mb-20">
+            <!-- Project 1 -->
+            <MudItem xs="12" md="4" Style="display: flex;">
+                <div class="glass-card project-card pa-6 d-flex flex-column flex-grow-1" style="border-top: 2px solid #ff2f92;">
+                    <div class="mb-4">
+                        <MudText Typo="Typo.h6" Class="text-white font-bold mb-1">Student Result System</MudText>
+                        <MudText Typo="Typo.caption" Class="text-pink tracking-wider font-bold">C# • .NET MAUI</MudText>
+                    </div>
+                    <MudText Typo="Typo.body2" Class="text-gray-400 mb-2">• Developed a cross-platform application to efficiently manage student records, grades, and academic results.</MudText>
+                    <MudText Typo="Typo.body2" Class="text-gray-400 mb-6">• Implemented a user-friendly interface and integrated a backend database for secure data retrieval.</MudText>
+                    <MudButton Href="https://github.com/Nithish-Subakarnan-0777/Student-Result-System" Target="_blank" Variant="Variant.Text" Class="mt-auto align-self-start text-white hover-text-pink px-0" EndIcon="@Icons.Material.Filled.ArrowForward">Source Code</MudButton>
+                </div>
+            </MudItem>
+
+            <!-- Project 2 -->
+            <MudItem xs="12" md="4" Style="display: flex;">
+                <div class="glass-card project-card pa-6 d-flex flex-column flex-grow-1" style="border-top: 2px solid #39ff14;">
+                    <div class="mb-4">
+                        <MudText Typo="Typo.h6" Class="text-white font-bold mb-1">Glossy Commerce App</MudText>
+                        <MudText Typo="Typo.caption" Class="text-green tracking-wider font-bold">C# • .NET MAUI</MudText>
+                    </div>
+                    <MudText Typo="Typo.body2" Class="text-gray-400 mb-2">• Designed and built a cross-platform e-commerce application featuring product catalogs and carts.</MudText>
+                    <MudText Typo="Typo.body2" Class="text-gray-400 mb-6">• Leveraged C# and .NET MAUI to ensure a seamless, responsive, and intuitive user experience.</MudText>
+                    <MudButton Href="https://github.com/Nithish-Subakarnan-0777/GlossyCommerce" Target="_blank" Variant="Variant.Text" Class="mt-auto align-self-start text-white hover-text-green px-0" EndIcon="@Icons.Material.Filled.ArrowForward">Source Code</MudButton>
+                </div>
+            </MudItem>
+
+            <!-- Project 3: EchoSphere -->
+            <MudItem xs="12" md="4" Style="display: flex;">
+                <div class="glass-card project-card pa-6 d-flex flex-column flex-grow-1" style="border-top: 2px solid #00e5ff;">
+                    <div class="mb-4">
+                        <MudText Typo="Typo.h6" Class="text-white font-bold mb-1">EchoSphere Social App</MudText>
+                        <MudText Typo="Typo.caption" Style="color: #00e5ff;" Class="tracking-wider font-bold">.NET MAUI BLAZOR • SQL • SIGNALR</MudText>
+                    </div>
+                    <MudText Typo="Typo.body2" Class="text-gray-400 mb-2">• Built an end-to-end cross-platform social media platform featuring user registration, OTP verification, and an interactive social feed.</MudText>
+                    <MudText Typo="Typo.body2" Class="text-gray-400 mb-6">• Integrated real-time global chat functionality using SignalR alongside a robust SQL Server (SSMS) backend.</MudText>
+                    <MudButton Href="https://github.com/Nithish-Subakarnan-0777/EchoSphere" Target="_blank" Variant="Variant.Text" Class="mt-auto align-self-start text-white px-0" EndIcon="@Icons.Material.Filled.ArrowForward">Source Code</MudButton>
+                </div>
+            </MudItem>
+        </MudGrid>
+
+        <!-- ACHIEVEMENTS & EDUCATION -->
+        <MudGrid Class="mb-12">
+            <MudItem xs="12" md="6" Style="display: flex;">
+                <div class="glass-card pa-8 d-flex flex-column flex-grow-1">
+                    <MudText Typo="Typo.h5" Class="mb-6 font-bold text-white flex align-center gap-3">
+                        <MudIcon Icon="@Icons.Material.Filled.WorkspacePremium" Class="text-pink" /> Certifications
+                    </MudText>
+                    <div class="d-flex flex-column gap-4">
+                        <div class="d-flex align-start gap-3"><MudIcon Icon="@Icons.Material.Filled.CheckCircleOutline" Size="Size.Small" Class="text-gray-500 mt-1" /><MudText Class="text-gray-300">Machine Learning Professional - <strong>Infosys</strong></MudText></div>
+                        <div class="d-flex align-start gap-3"><MudIcon Icon="@Icons.Material.Filled.CheckCircleOutline" Size="Size.Small" Class="text-gray-500 mt-1" /><MudText Class="text-gray-300">Machine Learning Certification - <strong>Stanford</strong></MudText></div>
+                        <div class="d-flex align-start gap-3"><MudIcon Icon="@Icons.Material.Filled.CheckCircleOutline" Size="Size.Small" Class="text-gray-500 mt-1" /><MudText Class="text-gray-300">Intro to Deep Learning - <strong>Great Learning</strong></MudText></div>
+                        <div class="d-flex align-start gap-3"><MudIcon Icon="@Icons.Material.Filled.CheckCircleOutline" Size="Size.Small" Class="text-gray-500 mt-1" /><MudText Class="text-gray-300">AWS Solutions Architect - <strong>AWS</strong></MudText></div>
+                    </div>
+                </div>
+            </MudItem>
+            <MudItem xs="12" md="6" Style="display: flex;">
+                <div class="glass-card pa-8 d-flex flex-column flex-grow-1">
+                    <MudText Typo="Typo.h5" Class="mb-6 font-bold text-white flex align-center gap-3">
+                        <MudIcon Icon="@Icons.Material.Filled.EmojiEvents" Class="text-green" /> Trophies & Education
+                    </MudText>
+                    <div class="d-flex flex-column gap-4">
+                        <div class="d-flex align-start gap-3"><MudIcon Icon="@Icons.Material.Filled.MilitaryTech" Size="Size.Small" Class="text-pink mt-1" /><MudText Class="text-gray-300"><strong>1st Place</strong> - National Level Web Designing</MudText></div>
+                        <div class="d-flex align-start gap-3"><MudIcon Icon="@Icons.Material.Filled.StarBorder" Size="Size.Small" Class="text-green mt-1" /><MudText Class="text-gray-300"><strong>TNSI Semi-finalist</strong></MudText></div>
+                        <div class="d-flex align-start gap-3"><MudIcon Icon="@Icons.Material.Filled.School" Size="Size.Small" Class="text-gray-500 mt-1" /><MudText Class="text-gray-300">B.E. Computer Science | <strong>Kings College</strong> | 7.91 CGPA</MudText></div>
+                        <div class="d-flex align-start gap-3"><MudIcon Icon="@Icons.Material.Filled.School" Size="Size.Small" Class="text-gray-500 mt-1" /><MudText Class="text-gray-300">HSC | <strong>Brindhavan Matric Hr. Sec</strong> | 72.5%</MudText></div>
+                        <div class="d-flex align-start gap-3"><MudIcon Icon="@Icons.Material.Filled.School" Size="Size.Small" Class="text-gray-500 mt-1" /><MudText Class="text-gray-300">SSLC | <strong>OMA Matric School</strong> | 88.4%</MudText></div>
+                    </div>
+                </div>
+            </MudItem>
+        </MudGrid>
+
+        <!-- FOOTER / COPYRIGHT -->
+        <div class="text-center pa-6 mt-8" style="border-top: 1px solid rgba(255,255,255,0.05);">
+            <MudText Typo="Typo.body2" Class="text-gray-500">© 2026 Nithish Subakarnan. All rights reserved.</MudText>
+        </div>
+
+    </MudContainer>
+</div>
+
+<style>
+    /* PREMIUM GLASSMORPHISM & ANIMATION STYLES */
+
+    body {
+        background-color: #030303;
+    }
+
+    .premium-background {
+        position: relative;
+        min-height: 100vh;
+        overflow: hidden;
+        background: radial-gradient(circle at 15% 50%, rgba(255, 47, 146, 0.04), transparent 50%), radial-gradient(circle at 85% 30%, rgba(57, 255, 20, 0.04), transparent 50%);
+    }
+
+    .glass-card {
+        background: rgba(20, 20, 20, 0.4);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 24px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s ease;
+    }
+
+    .project-card:hover, .skill-card:hover {
+        transform: translateY(-8px);
+        border-color: rgba(255, 255, 255, 0.15);
+        background: rgba(30, 30, 30, 0.5);
+    }
+
+        .skill-card:hover .skill-icon {
+            color: #ff2f92 !important;
+            transform: scale(1.1);
+            transition: all 0.3s ease;
+        }
+
+    /* AVATAR GLOW SETUP */
+    .avatar-container {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .premium-avatar {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        object-position: center top;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        z-index: 2;
+        position: relative;
+    }
+
+    .avatar-glow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: linear-gradient(45deg, #ff2f92, #39ff14, #00e5ff);
+        filter: blur(25px);
+        opacity: 0.5;
+        animation: spin-glow 8s linear infinite;
+        z-index: 1;
+    }
+
+    @@keyframes spin-glow {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    /* TYPOGRAPHY & BUTTONS */
+    .hero-title {
+        font-weight: 800;
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
+        background: linear-gradient(to right, #ffffff, #a1a1aa);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -1px;
+    }
+
+    .text-gray-400 {
+        color: #a1a1aa;
+    }
+
+    .text-gray-300 {
+        color: #d4d4d8;
+    }
+
+    .text-gray-500 {
+        color: #71717a;
+    }
+
+    .text-pink {
+        color: #ff2f92;
+    }
+
+    .text-green {
+        color: #39ff14;
+    }
+
+    .tracking-widest {
+        letter-spacing: 0.1em;
+    }
+
+    .tracking-wider {
+        letter-spacing: 0.05em;
+    }
+
+    .premium-btn {
+        border-radius: 999px !important;
+        font-weight: 600 !important;
+        text-transform: none !important;
+        padding: 12px 32px !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .btn-primary {
+        background: #ff2f92 !important;
+        color: white !important;
+        box-shadow: 0 4px 15px rgba(255, 47, 146, 0.3) !important;
+    }
+
+        .btn-primary:hover {
+            background: #e61e7a !important;
+            box-shadow: 0 6px 25px rgba(255, 47, 146, 0.5) !important;
+            transform: translateY(-2px);
+        }
+
+    .btn-secondary {
+        border: 1px solid rgba(255,255,255,0.2) !important;
+        color: white !important;
+        background: rgba(255,255,255,0.05) !important;
+    }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1) !important;
+            border-color: rgba(255,255,255,0.4) !important;
+        }
+
+    .hover-text-pink:hover {
+        color: #ff2f92 !important;
+    }
+
+    .hover-text-green:hover {
+        color: #39ff14 !important;
+    }
+</style>
+
+@code {
+    private List<SkillItem> Skills = new()
+    {
+        new SkillItem { Category = "SQL", Details = "SELECT, WHERE, JOINS, GROUP BY, Subqueries", Icon = Icons.Material.Outlined.Storage },
+        new SkillItem { Category = "Programming", Details = "C#, Python (Pandas, NumPy, Matplotlib)", Icon = Icons.Material.Outlined.Code },
+        new SkillItem { Category = "App Development", Details = ".NET, MAUI", Icon = Icons.Material.Outlined.PhoneAndroid },
+        new SkillItem { Category = "Databases", Details = "MySQL, PostgreSQL", Icon = Icons.Material.Outlined.Dataset },
+        new SkillItem { Category = "Data Tools", Details = "Excel, Power BI, Jupyter, Colab", Icon = Icons.Material.Outlined.Analytics },
+        new SkillItem { Category = "Version Control", Details = "Git, GitHub", Icon = Icons.Material.Outlined.AccountTree }
+    };
+
+    public class SkillItem
+    {
+        public string Category { get; set; }
+        public string Details { get; set; }
+        public string Icon { get; set; }
+    }
+}

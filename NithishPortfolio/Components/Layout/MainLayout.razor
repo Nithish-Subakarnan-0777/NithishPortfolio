@@ -1,0 +1,25 @@
+﻿@inherits LayoutComponentBase
+<MudThemeProvider Theme="@PortfolioTheme" IsDarkMode="true" />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudMainContent Class="pt-8 px-4" Style="background: radial-gradient(circle at top, #0f0f0f, #020202); min-height: 100vh;">
+        @Body
+    </MudMainContent>
+</MudLayout>
+
+@code {
+    MudTheme PortfolioTheme = new MudTheme()
+    {
+        PaletteDark = new PaletteDark()
+        {
+            Primary = "#ff2f92",
+            Secondary = "#39ff14",
+            Tertiary = "#ff3b3b",
+            Background = "#050505",
+            Surface = "#101010",
+            TextPrimary = "#f5f5f5"
+        }
+    };
+}
