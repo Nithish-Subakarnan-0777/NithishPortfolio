@@ -1,21 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
   <defs>
-    <!-- The gradient that matches your portfolio theme -->
-    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff2f92" />
-      <stop offset="50%" stop-color="#39ff14" />
-      <stop offset="100%" stop-color="#00e5ff" />
+    <linearGradient id="terminalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#39ff14" />
+      <stop offset="100%" stop-color="#006600" />
     </linearGradient>
   </defs>
-  
-  <!-- Dark background circle -->
-  <circle cx="100" cy="100" r="95" fill="#0b0b0b" />
-  
-  <!-- Neon glowing border -->
-  <circle cx="100" cy="100" r="88" fill="none" stroke="url(#neonGradient)" stroke-width="8" />
-  
-  <!-- Your Initials -->
-  <text x="100" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="95" font-weight="900" text-anchor="middle" letter-spacing="-2">
-    <tspan fill="#ff2f92">S</tspan><tspan fill="#00e5ff">N</tspan>
+  <circle cx="100" cy="100" r="95" fill="#020802" />
+  <circle cx="100" cy="100" r="88" fill="none" stroke="url(#terminalGradient)" stroke-width="8" />
+  <text x="100" y="135" font-family="monospace, sans-serif" font-size="95" font-weight="900" text-anchor="middle" letter-spacing="-2" fill="#39ff14">
+    NS
   </text>
 </svg>
